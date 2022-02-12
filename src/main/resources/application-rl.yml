@@ -1,0 +1,14 @@
+resilience4j.ratelimiter:
+  instances:
+    sample:
+      # スレッドが待機するデフォルトの時間
+      timeoutDuration: 5s
+      # 計測する期間
+      limitRefreshPeriod: 10s
+      # 指定した期間の間に呼び出し可能な回数
+      limitForPeriod: 1
+
+      # ヘルスチェックエンドでサーキットブレーカーのステータスが確認可能になる
+      registerHealthIndicator: true
+
+      eventConsumerBufferSize: 100

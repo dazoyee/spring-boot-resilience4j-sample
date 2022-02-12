@@ -6,7 +6,7 @@ spring:
     name: resilience4j-client
 
   profiles:
-    active: cb,bulkhead,retry
+    active: cb,bulkhead,retry,rl
 
 management:
   endpoints:

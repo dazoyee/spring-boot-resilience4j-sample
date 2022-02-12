@@ -20,3 +20,10 @@ spring-boot-resilience4j-sample
 > 実行に失敗した際に再度実行する設定を行います。
 
 - `http://localhost:8080/retry`
+
+# RateLimiter
+
+> 一定期間に実行可能な回数が指定されます。 その回数を超えた場合には、指定した時間待ちが発生し、待ちの後に受け入れ可能数に空きがあれば処理を行う、ない場合はエラーを返すものになります。
+
+- `http://localhost:8080/rate-limit`
+- `http://localhost:8080/actuator/health`
