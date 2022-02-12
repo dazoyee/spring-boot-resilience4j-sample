@@ -1,0 +1,9 @@
+resilience4j.retry:
+  instances:
+    sample:
+      # 最大試行回数
+      maxAttempts: 2
+      # 再試行する前に待つ時間
+      waitDuration: 2s
+      retryExceptions:
+        - org.springframework.web.client.HttpServerErrorException

@@ -14,3 +14,9 @@ spring-boot-resilience4j-sample
 > バルクヘッドは同時に実行可能を制限する機能です。
 
 - `http://localhost:8080/delay`
+
+# Retry
+
+> 実行に失敗した際に再度実行する設定を行います。
+
+- `http://localhost:8080/retry`
