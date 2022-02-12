@@ -1,0 +1,7 @@
+resilience4j.bulkhead:
+  instances:
+    sample:
+      # バルクヘッドで許可される並列実行の最大量
+      maxConcurrentCalls: 1
+      # 飽和した隔壁に入ろうとしたときにスレッドがブロックされるべき最大時間
+      maxWaitDuration: 0
