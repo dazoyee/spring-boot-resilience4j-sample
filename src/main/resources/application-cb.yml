@@ -1,0 +1,27 @@
+resilience4j.circuitbreaker:
+  instances:
+    # 設定したい接続先システムを指定
+    sample:
+      # 失敗率の閾値。この数値を超えて失敗しているとOPENに移行する
+      failureRateThreshold: 50
+      # HALF_OPENの時に許可される呼び出しの数
+      permittedNumberOfCallsInHalfOpenState: 3
+      # COUNT_BASED | TIME_BASED
+      slidingWindowType: COUNT_BASED
+      # ここで指定した数のコール数を保持してエラーレートの計算に利用する
+      slidingWindowSize: 3
+      # エラーレートを計算するのに必要な最小のコール数
+      minimumNumberOfCalls: 1
+      # OPENからHALF_OPENに移行する前に待機する時間
+      waitDurationInOpenState: 10s
+      # trueだと自動でHALF_OPENに移行する
+      automaticTransitionFromOpenToHalfOpenEnabled: true
+      # ここで指定したExceptionが発生すると失敗としてカウントする
+      recordExceptions:
+        - org.springframework.web.client.HttpServerErrorException
+      # ここで指定したExceptionが発生すると失敗としてカウントしない
+      ignoreExceptions:
+        - com.github.ioridazo.spring.boot.resilience4j.sample.exception.SampleException
+
+      # ヘルスチェックエンドでサーキットブレーカーのステータスが確認可能になる
+      registerHealthIndicator: true
