@@ -27,3 +27,10 @@ spring-boot-resilience4j-sample
 
 - `http://localhost:8080/rate-limit`
 - `http://localhost:8080/actuator/health`
+
+# TimeLimiter
+
+> メソッドに対してタイムアウトを設定することができます。
+
+- `http://localhost:8080/time-in`
+- `http://localhost:8080/timeout`

@@ -1,0 +1,7 @@
+resilience4j.timelimiter:
+  instances:
+    sample:
+      # タイムアウトする時間の設定
+      timeoutDuration: 4s
+      # タイムアウト時に処理をキャンセルするか
+      cancelRunningFuture: false
