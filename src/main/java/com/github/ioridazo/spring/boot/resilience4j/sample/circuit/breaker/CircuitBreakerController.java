@@ -25,4 +25,10 @@ public class CircuitBreakerController {
         log.info("access failure!");
         return service.failure();
     }
+
+    @GetMapping("failure2")
+    public String failure2() {
+        log.info("access failure 2!");
+        return service.failurePart2();
+    }
 }
